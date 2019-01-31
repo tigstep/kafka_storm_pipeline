@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  vars_files:
+    - ./roles/vpc/vars/main.yml
+  environment:
+    AWS_PROFILE: "terraform_user"
+  roles:
+    - ../roles/vpc
+    - ../roles/subnet

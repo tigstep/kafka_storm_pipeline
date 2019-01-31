@@ -1,0 +1,8 @@
+- name: Create subnet
+  ec2_vpc_subnet:
+        state: present
+        vpc_id: "{{ vpc.vpc.id }}"
+        cidr: 10.0.1.0/28
+        resource_tags:
+          Name: ecskafka
+  register: subnet
