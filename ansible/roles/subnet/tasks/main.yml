@@ -1,8 +1,8 @@
-- name: Create subnet
+- name: kafkastorm subnet
   ec2_vpc_subnet:
         state: present
         vpc_id: "{{ vpc.vpc.id }}"
-        cidr: 10.0.1.0/28
+        cidr: "{{ cidr_block }}"
         resource_tags:
-          Name: ecskafka
+          Name: "{{ tag_name }}"
   register: subnet
