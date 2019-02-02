@@ -8,3 +8,4 @@
     - ../roles/vpc
     - ../roles/subnet
     - ../roles/security_group
+    - ../roles/ec2

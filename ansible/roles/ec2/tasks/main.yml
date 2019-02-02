@@ -1,0 +1,11 @@
+- name: kafkastorm ec2s
+  ec2:
+    key_name: "{{ key_name }}"
+    region: "{{ region }}"
+    instance_type: "{{ instance_type }}"
+    image: "{{ ami_id }}"
+    wait: yes
+    group: "{{ security_group.group_name }}"
+    count: "{{ count }}"
+    vpc_subnet_id: "{{ subnet.subnet.id }}"
+    assign_public_ip: yes
