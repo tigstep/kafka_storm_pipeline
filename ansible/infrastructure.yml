@@ -1,11 +1,14 @@
 ---
 - hosts: localhost
-  vars_files:
-    - ./roles/vpc/vars/main.yml
   environment:
     AWS_PROFILE: "terraform_user"
   roles:
     - ../roles/vpc
     - ../roles/subnet
     - ../roles/security_group
+    - ../roles/internet_gateway
+    - ../roles/route_table
     - ../roles/ec2
+#- hosts: ec2_group
+#  roles:
+#    - ../roles/docker
