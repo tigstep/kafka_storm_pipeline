@@ -9,6 +9,6 @@
     - ../roles/internet_gateway
     - ../roles/route_table
     - ../roles/ec2
-#- hosts: ec2_group
-#  roles:
-#    - ../roles/docker
+- hosts: ec2_group
+  roles:
+    - ../roles/docker

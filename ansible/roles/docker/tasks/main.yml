@@ -1,1 +1,4 @@
-- name: downloading docker
+- name: Install Docker
+  package:
+    name: "docker-ce"
+    state: "present"
