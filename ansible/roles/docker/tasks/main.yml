@@ -55,5 +55,10 @@
     name: docker
 - name: Log into DockerHub
   docker_login:
-    username: "{ docker_user }"
-    password: "{ docker_password }"
+    username: ""
+    password: ""
+- name: Pull the zookeeper image
+  docker_image:
+    name: jeygeethan/zookeeper-cluster
+- name: Start the container
+  shell: docker run -d --restart=always -p 2181:2181 -p 2888:2888 -p 3888:3888 -v /var/lib/zookeeper:/var/lib/zookeeper -v /var/log/zookeeper:/var/log/zookeeper jeygeethan/zookeeper-cluster {{ hostvars[groups['ec2_group'][0]]['inventory_hostname'] }},{{ hostvars[groups['ec2_group'][1]]['inventory_hostname'] }} {{ groups['ec2_group'].index(inventory_hostname) + 1 }}

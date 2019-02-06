@@ -2,4 +2,4 @@ key_name: csaa_ec2_key
 region: us-west-1
 instance_type: t2.micro
 ami_id: ami-0799ad445b5727125
-count: 1
+count: 2
