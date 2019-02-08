@@ -1,3 +1,12 @@
+- name: Set zk_host_list variable
+  set_fact:
+    zk_host_list: []
+- name: setting zk hosts
+  set_fact:
+    zk_host_list: "{{ zk_host_list }} + [ '{{ item }}' ]"
+  with_items:
+    "{{ groups['ec2_group'] }}"
+  register: zk_host_list
 - name: Upgrade all packages
   yum:
       name: '*'
@@ -6,16 +15,6 @@
   command: systemctl status docker
   register: docker_check
   ignore_errors: yes
-#- name: Download the Docker installer
-#  get_url:
-#      url: https://get.docker.com/
-#      dest: /root/install_docker.sh
-#      mode: 0700
-#  when: docker_check.stderr.find('service could not be found') != -1
-#- name: Install Docker
-#  shell: yum install docker
-#  shell: /root/install_docker.sh
-#  when: docker_check.stderr.find('service could not be found') != -1
 - name: Install docker
   yum:
     name: docker
@@ -61,4 +60,4 @@
   docker_image:
     name: jeygeethan/zookeeper-cluster
 - name: Start the container
-  shell: docker run -d --restart=always -p 2181:2181 -p 2888:2888 -p 3888:3888 -v /var/lib/zookeeper:/var/lib/zookeeper -v /var/log/zookeeper:/var/log/zookeeper jeygeethan/zookeeper-cluster {{ hostvars[groups['ec2_group'][0]]['inventory_hostname'] }},{{ hostvars[groups['ec2_group'][1]]['inventory_hostname'] }} {{ groups['ec2_group'].index(inventory_hostname) + 1 }}
+  shell: docker run -d --restart=always -p 2181:2181 -p 2888:2888 -p 3888:3888 -v /var/lib/zookeeper:/var/lib/zookeeper -v /var/log/zookeeper:/var/log/zookeeper jeygeethan/zookeeper-cluster "{{ zk_host_list | join(',') }}" {{ groups['ec2_group'].index(inventory_hostname) + 1 }}
