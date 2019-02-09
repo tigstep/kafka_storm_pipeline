@@ -29,4 +29,8 @@
         from_port: 3888
         to_port: 3888
         cidr_ip: 0.0.0.0/0
+      - proto: tcp
+        from_port: 9092
+        to_port: 9092
+        cidr_ip: 0.0.0.0/0
   register: security_group

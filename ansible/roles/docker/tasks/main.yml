@@ -71,5 +71,10 @@
 - name: Pull the zookeeper image
   docker_image:
     name: jeygeethan/zookeeper-cluster
-- name: Start the container
+- name: Start the zookeeper cluster
   shell: docker run -d --restart=always -p 2181:2181 -p 2888:2888 -p 3888:3888 -v /var/lib/zookeeper:/var/lib/zookeeper -v /var/log/zookeeper:/var/log/zookeeper jeygeethan/zookeeper-cluster "{{ zk_host_list | join(',') }}" {{ groups['ec2_group'].index(inventory_hostname) + 1 }}
+- name: Pull the kafka image
+  docker_image:
+    name: jeygeethan/kafka-cluster
+- name: Start the kafka cluster
+  shell: docker run -d -p 9092:9092 -e KAFKA_HOST={{ inventory_hostname }} -e KAFKA_PORT=9092 -e ZOOKEEPER_CONNECT={{ zk_host_port_list | join(',') }} -e KAFKA_ID={{ groups['ec2_group'].index(inventory_hostname) + 1 }} --name kafka jeygeethan/kafka-cluster
