@@ -7,6 +7,18 @@
   with_items:
     "{{ groups['ec2_group'] }}"
   register: zk_host_list
+- name: Set zk_host_port_list variable
+  set_fact:
+    zk_host_port_list: []
+- name: setting zk host:port
+  set_fact:
+    zk_host_port_list: "{{ zk_host_port_list }} + [ '{{ item }}' + ':2181' ]"
+  with_items:
+    "{{ groups['ec2_group'] }}"
+  register: zk_host_port_list
+- name: Debugging
+  debug:
+    "msg": "{{ zk_host_port_list | join(',') }}"
 - name: Upgrade all packages
   yum:
       name: '*'
