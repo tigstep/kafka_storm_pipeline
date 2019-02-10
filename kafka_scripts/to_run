@@ -1,0 +1,2 @@
+@Kafka Consumer
+./kafka-console-consumer.sh --zookeeper <zk_list> --topic <topic_name> --from-beginning

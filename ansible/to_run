@@ -1,0 +1,2 @@
+#Ansible build
+ansible-playbook infrastructure.yml
