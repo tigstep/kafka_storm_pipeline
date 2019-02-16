@@ -31,7 +31,7 @@ public class SimpleProducer {
         Properties props = new Properties();
 
         //Assign localhost id
-        props.put("bootstrap.servers", "localhost:9092");
+        props.put("bootstrap.servers", "<host>:9092");
 
         //Set acknowledgements for producer requests.
         props.put("acks", "all");
@@ -60,9 +60,13 @@ public class SimpleProducer {
         try {
             BufferedReader br = new BufferedReader(new FileReader("../input/input.txt"));
             String line;
+            int count = 0;
             while ((line = br.readLine()) != null) {
-                System.out.println(line);
+                count += 1;
+                producer.send(new ProducerRecord<String, String>(topicName,
+                        Integer.toString(count), line));
             }
+            producer.close();
         } catch (IOException e){
             System.exit(1);
         }

@@ -5,4 +5,4 @@ javac -cp "/home/linuxbrew/.linuxbrew/Cellar/kafka/2.1.0/libexec/libs/*" SimpleP
 #To run the SimpleProducer
 java -cp "/home/linuxbrew/.linuxbrew/Cellar/kafka/2.1.0/libexec/libs/*":. SimpleProducer test
 #To Consume
-kafka-console-consumer --bootstrap-server 13.56.78.70:9092 --topic test --from-beginning
+kafka-console-consumer --bootstrap-server <host>:9092 --topic test --from-beginning
