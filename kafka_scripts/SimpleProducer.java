@@ -1,5 +1,8 @@
 //import util.properties packages
 import java.util.Properties;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 //import simple producer packages
 import org.apache.kafka.clients.producer.Producer;
@@ -54,10 +57,21 @@ public class SimpleProducer {
         Producer<String, String> producer = new KafkaProducer
                 <String, String>(props);
 
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("../input/input.txt"));
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e){
+            System.exit(1);
+        }
+            /*
         for(int i = 0; i < 10; i++)
             producer.send(new ProducerRecord<String, String>(topicName,
                     Integer.toString(i), Integer.toString(i)));
         System.out.println("Message sent successfully");
         producer.close();
+        */
     }
 }
