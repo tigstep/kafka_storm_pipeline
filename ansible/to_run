@@ -1,2 +1,8 @@
 #Ansible build
 ansible-playbook infrastructure.yml
+
+#Storm
+##nimbus
+docker run -d --restart always --name nimbus storm storm nimbus -c storm.zookeeper.servers='["13.56.232.195","54.183.195.102","54.219.177.159"]'
+##supervisor
+docker run -d --restart always --name nimbus storm storm nimbus -c storm.zookeeper.servers='["13.56.232.195","54.183.195.102","54.219.177.159"]' -c nimbus.seeds='["13.56.232.195"]'
