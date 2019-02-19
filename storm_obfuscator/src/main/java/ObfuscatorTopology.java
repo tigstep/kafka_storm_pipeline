@@ -4,6 +4,8 @@ import org.apache.storm.StormSubmitter;
 import org.apache.storm.kafka.*;
 import org.apache.storm.spout.SchemeAsMultiScheme;
 import org.apache.storm.topology.TopologyBuilder;
+
+import java.util.Arrays;
 import java.util.UUID;
 
 /**
@@ -16,8 +18,9 @@ public class ObfuscatorTopology {
         //Used to build the topology
         TopologyBuilder builder = new TopologyBuilder();
 
+
         //Defining the kafka spout
-        String zkConnString = "localhost";
+        String zkConnString = "13.57.56.69";
         String topicName = "test";
         BrokerHosts hosts = new ZkHosts(zkConnString);
         SpoutConfig spoutConfig = new SpoutConfig(hosts, topicName, "/" + topicName, UUID.randomUUID().toString());
@@ -40,10 +43,10 @@ public class ObfuscatorTopology {
 
         //new configuration
         Config conf = new Config();
+        conf.put(Config.NIMBUS_SEEDS, Arrays.asList(new String[]{"13.57.56.69"}));
         //Set to false to disable debug information when
         // running in production on a cluster
         conf.setDebug(false);
-
         //If there are arguments, we are running on a cluster
         if (args != null && args.length > 0) {
             //parallelism hint to set the number of workers
