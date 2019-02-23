@@ -3,8 +3,8 @@ ansible-playbook infrastructure.yml
 
 #Storm
 ##nimbus
-docker run -p 6627:6627 -d --restart always --name nimbus storm storm nimbus -c storm.zookeeper.servers='["13.57.56.69","18.144.14.161","54.
-241.131.212"]'
+docker run -p 6627:6627 --hostname hostname -d --restart always --name nimbus storm storm nimbus -c storm.zookeeper.servers='[zk_list]'
 ##supervisor
-docker run -p 6700:6700 -d --restart always --name supervisor storm storm supervisor -c storm.zookeeper.servers='["13.57.56.69","18.144.14.1
-61","54.241.131.212"]' -c nimbus.seeds='["13.57.56.69"]'
+docker run -p --hostname nimbus_host 6700:6700 -d --restart always --name supervisor storm storm supervisor -c storm.zookeeper.servers='[zk_list]' -c nimbus.seeds='[nimbus_hosts]'
+##deploy topology
+storm jar target/ObfuscatorTopology.jar ObfuscatorTopology topol

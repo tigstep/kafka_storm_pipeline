@@ -33,4 +33,20 @@
         from_port: 9092
         to_port: 9092
         cidr_ip: 0.0.0.0/0
+      - proto: tcp
+        from_port: 6627
+        to_port: 6627
+        cidr_ip: 0.0.0.0/0
+      - proto: tcp
+        from_port: 6700
+        to_port: 6700
+        cidr_ip: 0.0.0.0/0
+      - proto: tcp
+        from_port: 6701
+        to_port: 6701
+        cidr_ip: 0.0.0.0/0
+      - proto: tcp
+        from_port: 6702
+        to_port: 6702
+        cidr_ip: 0.0.0.0/0
   register: security_group

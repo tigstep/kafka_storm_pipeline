@@ -43,7 +43,7 @@ public class ObfuscatorTopology {
 
         //new configuration
         Config conf = new Config();
-        conf.put(Config.NIMBUS_SEEDS, Arrays.asList(new String[]{"13.57.56.69"}));
+        conf.put(Config.NIMBUS_SEEDS, Arrays.asList(new String[]{"localhost"}));
         //Set to false to disable debug information when
         // running in production on a cluster
         conf.setDebug(false);
