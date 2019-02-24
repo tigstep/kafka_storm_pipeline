@@ -78,3 +78,17 @@
     name: jeygeethan/kafka-cluster
 - name: Start the kafka cluster
   shell: docker run -d -p 9092:9092 -e KAFKA_HOST={{ inventory_hostname }}:9092 -e KAFKA_PORT=9092 -e ZOOKEEPER_CONNECT={{ zk_host_port_list | join(',') }} -e KAFKA_ID={{ groups['ec2_group'].index(inventory_hostname) + 1 }} --name kafka tigstep/docker-kafka-cluster
+- name: copy storm.yaml
+  copy:
+    src: '{{playbook_dir}}/storm.yaml'
+    dest: /etc/storm.yaml
+    owner: root
+    group: root
+    mode: 0644
+- name: Modify storm.yml
+  lineinfile:
+    path: '/etc/storm.yaml'
+    insertafter: '^storm.zookeeper.servers:'
+    line: '- "{{item}}"'
+  with_items:
+    "{{ zk_host_list }}"
