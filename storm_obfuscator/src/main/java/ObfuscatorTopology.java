@@ -20,7 +20,7 @@ public class ObfuscatorTopology {
 
 
         //Defining the kafka spout
-        String zkConnString = "13.57.56.69";
+        String zkConnString = "";
         String topicName = "test";
         BrokerHosts hosts = new ZkHosts(zkConnString);
         SpoutConfig spoutConfig = new SpoutConfig(hosts, topicName, "/" + topicName, UUID.randomUUID().toString());
@@ -43,7 +43,7 @@ public class ObfuscatorTopology {
 
         //new configuration
         Config conf = new Config();
-        conf.put(Config.NIMBUS_SEEDS, Arrays.asList(new String[]{"localhost"}));
+        conf.put(Config.NIMBUS_SEEDS, Arrays.asList(new String[]{""}));
         //Set to false to disable debug information when
         // running in production on a cluster
         conf.setDebug(false);

@@ -3,7 +3,7 @@ ansible-playbook infrastructure.yml
 
 #Storm
 ##nimbus
-docker run -p 6627:6627 --hostname hostname -d --restart always --name nimbus storm storm nimbus -c storm.zookeeper.servers='[zk_list]'
+docker run -d -p 6627:6627 -it -v $(pwd)/storm.yaml:/conf/storm.yaml storm storm nimbus
 ##supervisor
 docker run -p --hostname nimbus_host 6700:6700 -d --restart always --name supervisor storm storm supervisor -c storm.zookeeper.servers='[zk_list]' -c nimbus.seeds='[nimbus_hosts]'
 ##deploy topology
