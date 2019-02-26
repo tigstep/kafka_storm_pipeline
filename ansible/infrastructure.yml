@@ -14,3 +14,10 @@
   become_user: root
   roles:
     - ../roles/docker
+    - ../roles/zookeeper
+    - ../roles/kafka
+- hosts: nimbus_group
+  become: yes
+  become_user: root
+  roles:
+    - ../roles/storm_nimbus

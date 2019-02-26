@@ -16,9 +16,6 @@
 
 ########### These MUST be filled in for a storm configuration
 storm.zookeeper.servers:
-  - ""
-  - ""
-  - ""
 
 nimbus.seeds: ["","",""]
 

@@ -13,13 +13,27 @@
 - name: debugging
   debug:
     msg: "{{ ec2s.instances }}"
-- name: adding hosts
+- name: adding general ec2_group hosts
   add_host:
       name: "{{ item.public_ip }}"
       groups: ec2_group
       ansible_user: ec2-user
       ansible_ssh_private_key_file: "/home/tigstep/csaa_ec2_key.pem"
   with_items: "{{ ec2s.instances }}"
+- name: adding nimbus host
+  add_host:
+      name: "{{ item.public_ip }}"
+      groups: nimbus_group
+      ansible_user: ec2-user
+      ansible_ssh_private_key_file: "/home/tigstep/csaa_ec2_key.pem"
+  with_items: "{{ ec2s.instances[:1] }}"
+- name: adding supervisor hosts
+  add_host:
+    name: "{{ item.public_ip }}"
+    groups: supervisor_group
+    ansible_user: ec2-user
+    ansible_ssh_private_key_file: "/home/tigstep/csaa_ec2_key.pem"
+  with_items: "{{ ec2s.instances[1:] }}"
 - name: wait for the instances
   local_action:
       module: wait_for
@@ -27,7 +41,15 @@
       port: 22
       state: "started"
   with_items: "{{ ec2s.instances }}"
-- name: debugging
+- name: debugging ec2_groups
   debug:
     "msg": "{{ item }}"
-  with_items: "{{ groups['all'] }}"
+  with_items: "{{ groups['ec2_group'] }}"
+- name: debugging nimbus group
+  debug:
+    "msg": "{{ item }}"
+  with_items: "{{ groups['nimbus_group'] }}"
+- name: debugging supervisor group
+  debug:
+    "msg": "{{ item }}"
+  with_items: "{{ groups['supervisor_group'] }}"

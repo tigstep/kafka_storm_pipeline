@@ -1,0 +1,5 @@
+- name: Pull the storm image
+  docker_image:
+    name: storm
+- name: Start the storm nimbus
+  shell: docker run -d --restart=always -p 6627:6627 -it -v /etc/storm.yaml:/conf/storm.yaml storm storm nimbus

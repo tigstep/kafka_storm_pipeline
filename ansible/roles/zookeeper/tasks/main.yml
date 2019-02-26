@@ -1,0 +1,5 @@
+- name: Pull the zookeeper image
+  docker_image:
+    name: jeygeethan/zookeeper-cluster
+- name: Start the zookeeper cluster
+  shell: docker run -d --restart=always -p 2181:2181 -p 2888:2888 -p 3888:3888 -v /var/lib/zookeeper:/var/lib/zookeeper -v /var/log/zookeeper:/var/log/zookeeper jeygeethan/zookeeper-cluster "{{ zk_host_list | join(',') }}" {{ groups['ec2_group'].index(inventory_hostname) + 1 }}
