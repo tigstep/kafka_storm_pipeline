@@ -17,9 +17,9 @@
 ########### These MUST be filled in for a storm configuration
 storm.zookeeper.servers:
 
-nimbus.seeds: ["","",""]
+nimbus.seeds: [nimbus_seeds]
 
-storm.local.hostname: ""
+storm.local.hostname: "local_hostname"
 
 
 # ##### These may optionally be filled in:

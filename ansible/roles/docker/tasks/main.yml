@@ -1,12 +1,20 @@
 - name: Set zk_host_list variable
   set_fact:
     zk_host_list: []
+- name: Set nimbus_list variable
+  set_fact:
+    nimbus_list: []
 - name: setting zk hosts
   set_fact:
     zk_host_list: "{{ zk_host_list }} + [ '{{ item }}' ]"
   with_items:
     "{{ groups['ec2_group'] }}"
   register: zk_host_list
+- name: setting nimbus hosts
+  set_fact:
+    nimbus_list: "{{ nimbus_list }} + ['{{ item }}']"
+  with_items:
+    "{{ groups['nimbus_group'] }}"
 - name: Set zk_host_port_list variable
   set_fact:
     zk_host_port_list: []
@@ -75,10 +83,20 @@
     owner: root
     group: root
     mode: 0644
-- name: Modify storm.yml
+- name: Modify storm.yml zookeepers
   lineinfile:
     path: '/etc/storm.yaml'
     insertafter: '^storm.zookeeper.servers:'
     line: '- "{{item}}"'
   with_items:
     "{{ zk_host_list }}"
+- name: Modify storm.yml nimbuses
+  replace:
+    path: '/etc/storm.yaml'
+    regexp: '\b(\w*nimbus_seeds\w*)\b'
+    replace: "{{'\"' +  nimbus_list|join('\",\"') + '\"'}}"
+- name: Modify storm.yml hostname
+  replace:
+    path: '/etc/storm.yaml'
+    regexp: '\b(\w*local_hostname\w*)\b'
+    replace: "{{ inventory_hostname }}"
