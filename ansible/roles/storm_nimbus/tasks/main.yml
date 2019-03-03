@@ -3,3 +3,5 @@
     name: storm
 - name: Start the storm nimbus
   shell: docker run -d --restart=always -p 6627:6627 -it -v /etc/storm.yaml:/conf/storm.yaml storm storm nimbus
+- name: Start the storm nimbus
+  shell: docker run -d --restart=always -p 8080:8080 -p 8000:8000 -it -v /etc/storm.yaml:/conf/storm.yaml storm storm ui

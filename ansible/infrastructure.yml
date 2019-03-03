@@ -21,3 +21,8 @@
   become_user: root
   roles:
     - ../roles/storm_nimbus
+- hosts: supervisor_group
+  become: yes
+  become_user: root
+  roles:
+    - ../roles/storm_supervisor
