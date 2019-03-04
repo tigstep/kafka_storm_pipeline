@@ -4,6 +4,9 @@ import org.apache.storm.topology.OutputFieldsDeclarer;
 import org.apache.storm.topology.base.BaseRichBolt;
 import org.apache.storm.tuple.Fields;
 import org.apache.storm.tuple.Tuple;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Map;
 
 /**
@@ -12,6 +15,7 @@ import java.util.Map;
 
 public class ObfuscatorBolt extends BaseRichBolt {
     private OutputCollector _collector;
+    private static final Logger LOG = LoggerFactory.getLogger(ObfuscatorBolt.class);
 
     @Override
     public void prepare(Map conf, TopologyContext context, OutputCollector collector) {
@@ -20,8 +24,9 @@ public class ObfuscatorBolt extends BaseRichBolt {
 
     @Override
     public void execute(Tuple input) {
-        String val = input.getString(0);
-        System.out.println(val);
+        //String val = input.getString(1);
+        LOG.info(input.toString());
+        //System.out.println(val);
         _collector.ack(input);
     }
 

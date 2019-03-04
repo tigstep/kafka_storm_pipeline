@@ -1,5 +1,7 @@
 #To create a topic
 kafka-topics --create --zookeeper <ZK_HOST> --replication-factor 2 --partitions 1 --topic test
+#To produce using simple producer
+kafka-console-producer --broker-list zk_host:9092 --topic test
 #To compile the SimpleProducer
 javac -cp "/home/linuxbrew/.linuxbrew/Cellar/kafka/2.1.0/libexec/libs/*" SimpleProducer.java
 #To run the SimpleProducer
