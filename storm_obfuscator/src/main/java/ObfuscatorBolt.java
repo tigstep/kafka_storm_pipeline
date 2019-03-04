@@ -24,9 +24,7 @@ public class ObfuscatorBolt extends BaseRichBolt {
 
     @Override
     public void execute(Tuple input) {
-        //String val = input.getString(1);
         LOG.info(input.toString());
-        //System.out.println(val);
         _collector.ack(input);
     }
 
