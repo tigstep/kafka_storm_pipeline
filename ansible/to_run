@@ -7,4 +7,4 @@ docker run -d -p 6627:6627 -it -v $(pwd)/storm.yaml:/conf/storm.yaml storm storm
 ##supervisor
 docker run -p --hostname nimbus_host 6700:6700 -d --restart always --name supervisor storm storm supervisor -c storm.zookeeper.servers='[zk_list]' -c nimbus.seeds='[nimbus_hosts]'
 ##deploy topology
-storm jar target/ObfuscatorTopology.jar ObfuscatorTopology topol
+storm jar target/ObfuscatorTopology.jar ObfuscatorTopology topology_name zk_host topic_name nimbus_host
