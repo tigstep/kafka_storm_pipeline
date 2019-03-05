@@ -25,3 +25,8 @@ To Do
     <li>implement time/count based batching</li>
   </ul>
 </ul>
+
+Observations
+<ul>
+	<li>If possible, always use Terraform for infrastructure setup</li>
+</ul>
