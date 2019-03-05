@@ -8,3 +8,7 @@ javac -cp "/home/linuxbrew/.linuxbrew/Cellar/kafka/2.1.0/libexec/libs/*" SimpleP
 java -cp "/home/linuxbrew/.linuxbrew/Cellar/kafka/2.1.0/libexec/libs/*":. SimpleProducer test
 #To Consume
 kafka-console-consumer --bootstrap-server <host>:9092 --topic test --from-beginning
+#To compile jedis
+javac -cp "/mnt/c/Users/Tigran/Documents/jedis-2.0.0.jar/*" RedisInserter.java
+#To run
+java -cp "/mnt/c/Users/Tigran/Documents/jedis-2.0.0.jar/*":. RedisInserter
