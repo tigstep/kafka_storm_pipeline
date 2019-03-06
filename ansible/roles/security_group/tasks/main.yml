@@ -57,4 +57,8 @@
         from_port: 8000
         to_port: 8000
         cidr_ip: 0.0.0.0/0
+      - proto: tcp
+        from_port: 6379
+        to_port: 6379
+        cidr_ip: 0.0.0.0/0
   register: security_group

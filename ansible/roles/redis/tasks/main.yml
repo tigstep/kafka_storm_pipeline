@@ -1,0 +1,19 @@
+- name: redis subnet group
+  elasticache_subnet_group:
+    description: redis subnet group
+    state: present
+    name: redisgroup
+    region: "{{ region }}"
+    subnets:
+      - "{{ subnet.subnet.id }}"
+- name: redis
+  elasticache:
+    name: "kafka-storm"
+    state: present
+    engine: redis
+    cache_engine_version: 5.0.3
+    node_type: cache.t2.micro
+    num_nodes: 1
+    security_group_ids: "{{ security_group.group_id }}"
+    cache_port: 6379
+    cache_subnet_group: "{{'redisgroup'}}"

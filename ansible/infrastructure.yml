@@ -9,6 +9,7 @@
     - ../roles/internet_gateway
     - ../roles/route_table
     - ../roles/ec2
+    - ../roles/redis
 - hosts: ec2_group
   become: yes
   become_user: root
