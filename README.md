@@ -1,14 +1,21 @@
 # kafka_storm_transformer
 To Do
 <ul>
+<li>Storm Transformer</li>
+<ol>
+	<li>Pass the redis endpoint into Topology</li>
+	<li>Add Jedis to Topology Maven</li>
+	<li>Change the Obfuscator bolt name to LookupBolt</li>
+  	<li>Modify the transformer to do a Redis lookup</li>
+</ol>
 <li>PSQL</li>
-<ul>
+<ol>
   <li>start a psql database</li>
-</ul>
+</ol>
 <li>STORM</li>
-  <ul>
-    <li>implement time/count based batching</li>
-  </ul>
+<ol>
+  <li>implement time/count based batching</li>
+</ol>
 </ul>
 
 Observations
