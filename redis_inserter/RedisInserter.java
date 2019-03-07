@@ -3,7 +3,7 @@ import redis.clients.jedis.Jedis;
 
 public class RedisInserter {
     public static void main(String[] args) throws java.io.IOException{
-        FileInputStream fstream = new FileInputStream("../input/input.txt");
+        FileInputStream fstream = new FileInputStream("../input/SSN_LN_FN_AN_Bal_Type_Addr.txt");
         BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
         //Connecting to Redis server on localhost
         Jedis jedis = new Jedis("127.0.0.1");

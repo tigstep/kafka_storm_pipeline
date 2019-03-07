@@ -1,0 +1,198 @@
+SSN,LastName,FirstName,AccountNumber,Balance,Type,Address
+997903835,Adelia,Persing,5625032,0.00,business,470 S. Lexington St. Springfield Gardens NY 11413
+112084410,Agnus,Laswell,8111895,0.00,personal,462 Paris Hill Avenue Monroeville PA 15146
+113542615,Alberto,Borg,6972027,0.00,personal,9912 Myers Drive State College PA 16801
+124767919,Alena,Sterrett,8234055,0.00,personal,436 Theatre Drive Hobart IN 46342
+125393390,Ali,Munguia,9601750,0.00,personal,627 North Cherry Hill Street Muscatine IA 52761
+126024634,Alishia,Hollon,5542631,0.00,personal,5 San Pablo St. Marlton NJ 08053
+128534175,Aliza,Wolfenbarger,9039558,0.00,personal,887 Lantern St. Wausau WI 54401
+132528612,Alyce,Bert,0342894,0.00,business,785 Wintergreen Road Southgate MI 48195
+136238799,Amada,Wooster,7969911,0.00,personal,27 West St. Galloway OH 43119
+140063474,Angila,Mcarthur,8761662,0.00,personal,572 Grand Drive Sioux City IA 51106
+140802413,Annetta,Blackford,7141528,0.00,personal,8289 NW. Griffin Drive Olive Branch MS 38654
+140954794,Ashley,Mckeithan,0403881,0.00,personal,903 Trout Dr. Mc Lean VA 22101
+142372267,Ashly,Gibby,3914352,0.00,personal,5 Fieldstone Lane Fall River MA 02720
+145040560,Autumn,Jellison,5255490,0.00,personal,8 Myers Street Hernando MS 38632
+146131118,Becky,Burget,0834674,0.00,personal,8862 Griffin Dr. Manassas VA 20109
+146654404,Ben,Fill,1511566,0.00,business,477 Summer Ave. Owatonna MN 55060
+152069249,Bethel,Kittinger,8765014,0.00,business,35 Longbranch St. Middletown CT 06457
+153395134,Bettyann,Melugin,3299139,0.00,business,9252 Bayberry Dr. Freeport NY 11520
+155324628,Bettye,Landgraf,7589062,0.00,personal,9 Albany St. Jonesborough TN 37659
+161498603,Beula,Shevlin,5991248,0.00,business,75 S. Pine Lane Oak Lawn IL 60453
+169111301,Beulah,Tomas,3417099,0.00,personal,8261 Magnolia Street Ridgefield CT 06877
+171577254,Birgit,Gidley,6912657,0.00,personal,8356 East Hilltop Ave. North Miami Beach FL 33160
+173939409,Bonnie,Micco,7812574,0.00,personal,7112 Young St. Dorchester MA 02125
+174965877,Boyce,Pass,2239372,0.00,personal,7 North Sage St. Stow OH 44224
+185046659,Branda,Grunwald,3473630,0.00,personal,5 E. Edgewood Drive Maspeth NY 11378
+186301612,Bret,Burcham,7390662,0.00,business,153 Spring Ave. Middle River MD 21220
+189446326,Britteny,Surette,1475984,0.00,business,420 Sherwood St. Pleasanton CA 94566
+197443770,Bryce,Brenneman,2626404,0.00,business,998 Mulberry Rd. Flowery Branch GA 30542
+198281228,Buster,Seefeldt,1545698,0.00,personal,7343 1st Street Lombard IL 60148
+202383348,Carmon,Stutes,1406919,0.00,personal,832 Mill Pond Lane Terre Haute IN 47802
+203931635,Charlotte,Cowie,6148105,0.00,personal,117 N. Beacon Street Norwalk CT 06851
+207645756,Chas,Raso,9518301,0.00,personal,3 Marvon St. Millington TN 38053
+219183330,Chelsey,Nix,4821516,0.00,personal,923 Littleton St. Nashville TN 37205
+223270805,Christal,Sharif,0073311,0.00,personal,7827 Delaware Dr. Seymour IN 47274
+223823668,Clay,Castiglia,5330032,0.00,personal,1 Elmwood Court Windsor Mill MD 21244
+228106970,Cleta,Cashman,5722582,0.00,business,99 Arnold St. Randallstown MD 21133
+230215547,Conchita,Ornellas,1588971,0.00,personal,523 Myrtle Ave. Voorhees NJ 08043
+237829637,Connie,Hohn,5803092,0.00,personal,422 Addison Street Madison AL 35758
+239273599,Cortez,Blay,7192383,0.00,personal,7197 Newport Dr. Latrobe PA 15650
+253529474,Dacia,Vass,3061014,0.00,personal,6 East Roberts Rd. Bozeman MT 59715
+254388534,Dahlia,Alberts,8470707,0.00,business,9060 SW. Corona Ave. Lorton VA 22079
+256517294,Dannette,Cauble,9006550,0.00,business,8412 Pacific Avenue Perth Amboy NJ 08861
+261545021,Daphne,Wilner,5896200,0.00,personal,9657 Maiden St. Gurnee IL 60031
+280701414,Deetta,Soden,9790353,0.00,personal,17 Maple St. Unit A Kings Mountain NC 28086
+287663241,Denae,Lindo,3471313,0.00,personal,577 W. Primrose St. Lansdale PA 19446
+298502881,Denna,Koester,6515220,0.00,personal,680 Sugar Road Merrick NY 11566
+300033898,Deon,Donovan,2560688,0.00,personal,286 South Richardson Ave. Winona MN 55987
+302093829,Dianne,Gram,4675410,0.00,personal,808 Old Myrtle St. Poughkeepsie NY 12601
+303023021,Dominica,Amin,7087493,0.00,personal,66 Green Lake Lane Cambridge MA 02138
+304663664,Dorthea,Christian,2852794,0.00,personal,71 W. Newbridge Dr. Potomac MD 20854
+306803820,Elina,Reinecke,9865902,0.00,business,554 Washington Drive Ocoee FL 34761
+313077611,Elmer,Hewes,7938541,0.00,business,159 West Beechwood Drive Winder GA 30680
+317196960,Elva,Bagnell,2558651,0.00,personal,9200 Catherine Avenue Fairburn GA 30213
+318156062,Elvis,Then,6041848,0.00,personal,4 State Ave. Massillon OH 44646
+320336327,Emma,Greb,8127724,0.00,personal,83 Howard St. Saint Paul MN 55104
+322724913,Emory,Mccowan,0019554,0.00,personal,395 Greenrose Street Toms River NJ 08753
+325998393,Erinn,Quinonez,3121314,0.00,business,789 Green Lake St. Northbrook IL 60062
+326668834,Ernestine,Fillers,9310846,0.00,personal,769 Myrtle St. Champaign IL 61821
+327939394,Floy,Hyun,3126837,0.00,personal,930 Rockland Circle Grand Island NE 68801
+329296982,Francina,Bauch,7768548,0.00,business,42 Race St. Irwin PA 15642
+337540818,Fransisca,Viviani,7430243,0.00,business,74 East Jackson Dr. Richmond Hill NY 11418
+341032905,Freddie,Buttner,0471826,0.00,business,497 Warren Ave. Clinton MD 20735
+347613319,Fredia,Motta,3007768,0.00,business,78 Oklahoma Lane Ozone Park NY 11417
+347685910,Geoffrey,Cauble,7454135,0.00,business,8 Golden Star St. Stafford VA 22554
+348581921,Gerry,Alaimo,8693118,0.00,personal,398 Bishop Dr. Fort Worth TX 76110
+349529369,Gidget,Hockett,1629228,0.00,personal,967 6th Dr. Harlingen TX 78552
+356941394,Gwen,Loso,4042037,0.00,personal,82 Shadow Brook Road Inman SC 29349
+367400897,Hai,Vanderhoof,6799274,0.00,personal,72 Fairway St. Chambersburg PA 17201
+371131170,Hallie,Hollander,1159060,0.00,personal,974 St Paul Dr. Olney MD 20832
+372033787,Harriett,Virgil,3670985,0.00,personal,9031 Smith Store St. Mechanicsville VA 23111
+374237242,Hellen,Roehr,3531636,0.00,business,229 Liberty Ave. Culpeper VA 22701
+374875812,Hilde,Schug,6994134,0.00,business,118 North Pearl Street Old Bridge NJ 08857
+376973409,Hortense,Knupp,0744767,0.00,personal,76 Chapel Drive Romeoville IL 60446
+381684441,Huey,Nobriga,1007016,0.00,personal,213 Willow Street Linden NJ 07036
+384173429,Hyo,Cruse,2809172,0.00,business,4 Catherine Court Villa Rica GA 30180
+386729512,Jarod,Moy,0682032,0.00,personal,342 Pleasant Court Wasilla AK 99654
+409325581,Jarred,Mudd,2308582,0.00,personal,9197 Annadale Dr. Horn Lake MS 38637
+410858097,Jarrett,Woodell,5556018,0.00,personal,690 Morris Ave. Dorchester Center MA 02124
+412874908,Jeannetta,Millsap,8899908,0.00,business,683 Clay St. Milford MA 01757
+413534443,Jermaine,Olaughlin,3997314,0.00,business,56 Silver Spear Dr. Grovetown GA 30813
+413728262,Jillian,Meszaros,3137568,0.00,personal,9167 Cedarwood Road Cheshire CT 06410
+415293582,June,Otwell,7416298,0.00,business,28 Boston Lane Ambler PA 19002
+418321845,Ka,Brendle,7548043,0.00,personal,35 Mulberry Street Portage IN 46368
+420955720,Kacy,Finn,0168859,0.00,personal,8001 Bedford Ave. Allen Park MI 48101
+424968488,Katheryn,Freudenthal,9633377,0.00,business,8047 Lincoln Lane Villa Park IL 60181
+425429966,Katrina,Lafreniere,8353937,0.00,personal,41 Prince Avenue Grandville MI 49418R
+427020910,Kelli,Lefebvre,4392526,0.00,personal,444 Mammoth Dr. Bismarck ND 58501
+435666783,Kit,Neary,0290760,0.00,business,3 Rosewood Dr. Powell TN 37849
+452758872,Laci,Howlett,4359351,0.00,personal,233 South Marconi Road Rowlett TX 75088
+458635933,Lael,Chon,8960973,0.00,personal,343 Bohemia Ave. Chillicothe OH 45601
+461836564,Lanell,Rist,8710053,0.00,personal,71 Bradford Street West Palm Beach FL 33404
+465995780,Laronda,Mcnett,3902505,0.00,personal,856 Argyle Circle Holland MI 49423
+466241691,Laverna,Okane,4827944,0.00,personal,23 Lyme Lane Orchard Park NY 14127
+470584648,Lavonia,Knop,5184560,0.00,personal,522 Beach St. Allentown PA 18102
+471318605,Layla,Griffith,7536769,0.00,business,7280 Jackson Street Corpus Christi TX 78418
+473378293,Leeanne,Jost,3931241,0.00,personal,4 Brandywine Street Cranston RI 02920
+475854657,Lenore,Prager,8853577,0.00,personal,9586 E. Jockey Hollow Dr. Richmond VA 23223
+480375376,Leslie,Lopinto,4990055,0.00,personal,7536 West Jefferson Street Mableton GA 30126
+483780856,Lianne,Huizenga,0853329,0.00,business,147 Lilac Ave. Lumberton NC 28358
+488472453,Linh,Wildey,2614461,0.00,personal,9327 Santa Clara Ave. Henderson KY 42420
+488719434,Lona,Coachman,4944013,0.00,business,884 Marsh St. Taunton MA 02780
+501517744,Lucilla,Meraz,6152656,0.00,business,777 West Rock Maple St. Worcester MA 01604
+502980368,Ludie,Croom,7220395,0.00,personal,487 Bridgeton Street Hartselle AL 35640
+509908060,Lulu,Frank,6984920,0.00,business,326 Taylor Road Bradenton FL 34203
+518357257,Lyndsay,Basel,9711553,0.00,personal,42 Edgefield Rd. Lake Charles LA 70605
+526556611,Madge,Kuo,1842344,0.00,personal,7968 Del Monte St. Tonawanda NY 14150
+534769103,Magnolia,Monk,6000924,0.00,personal,8667 El Dorado Rd. Southampton PA 18966
+535464628,Maia,Chase,7519390,0.00,personal,9167 Birch Hill Ave. Wallingford CT 06492
+543042637,Mandi,Eberle,5561246,0.00,business,24 Tanglewood St. Bear DE 19701
+549632299,Margert,Vos,6153577,0.00,business,825 Park St. Kennewick WA 99337
+565754604,Margit,Hirai,9161119,0.00,personal,5 Stillwater Dr. Southington CT 06489
+568646274,Margy,Boxer,7574599,0.00,business,7948 Market St. West Bloomfield MI 48322
+571026455,Marianela,Soler,6123860,0.00,business,140 E. Oak Meadow Dr. Lynnwood WA 98037
+577450292,Marina,Carlin,7460311,0.00,business,581 W. Marshall St. Schenectady NY 12302
+584119351,Maritza,Karle,4660393,0.00,personal,7917 Lafayette Rd. Baldwin NY 11510
+598846718,Martha,Reilly,8303610,0.00,business,9418 Armstrong Lane Wethersfield CT 06109
+599140975,Maryanne,Cassinelli,7189635,0.00,business,7323 6th St. Jersey City NJ 07302
+617335981,Maryland,Mcfarlain,3107392,0.00,personal,74 Rockaway Rd. Auburndale FL 33823
+618525374,Marylou,Mccracken,7313916,0.00,personal,93 Queen Circle Grayslake IL 60030
+629230756,Mathilde,Cowley,9307747,0.00,business,679 3rd St. Media PA 19063
+634480871,Maxine,Gushiken,1363359,0.00,business,9883 Devon Lane Palatine IL 60067
+636924029,Meg,Almodovar,6522160,0.00,business,519 Victoria St. Mount Vernon NY 10550
+643343409,Melanie,Dietrich,5441507,0.00,personal,53 South Mulberry Dr. Cordova TN 38016
+645902045,Melodee,Schroer,7030699,0.00,personal,8954 Rosewood Road Bluffton SC 29910
+652714685,Mickey,Kaczmarek,7821444,0.00,personal,774 Valley View Street Forney TX 75126
+658218112,Mickie,Rudolph,4998494,0.00,personal,9230 West Court Rd. Fort Myers FL 33905
+662471976,Miguel,Bernett,8080826,0.00,personal,7062 Augusta Rd. Braintree MA 02184
+664022715,Mika,Jerman,2727103,0.00,personal,997 Willow Lane Saint Charles IL 60174
+670516965,Mimi,Levario,2667169,0.00,personal,29 Jackson Lane Plattsburgh NY 12901
+672627175,Miranda,Widrick,7247420,0.00,business,811 Honey Creek St. Newark NJ 07103
+673906528,Mirna,Kalman,0335133,0.00,business,9159 North Walt Whitman St. Lafayette IN 47905
+680209444,Myra,Miskell,3365360,0.00,personal,695 White St. Petersburg VA 23803
+681240381,Nakisha,Dutton,8733840,0.00,personal,8 4th Lane San Angelo TX 76901
+686991558,Nella,Sperry,4864848,0.00,personal,7821 Stonybrook Ave. Gulfport MS 39503
+689001590,Ngan,Gugino,1698275,0.00,personal,294 Taylor Drive Bensalem PA 19020
+708254005,Niesha,Waye,8842691,0.00,personal,7838 Parker Ave. Kaukauna WI 54130
+711275703,Noelle,Dalrymple,8243513,0.00,personal,5 Market St. Hudson NH 03051
+716422715,Norene,Ulrich,8396158,0.00,personal,4 East Dunbar St. North Bergen NJ 07047
+730739782,Odette,Cancel,4799363,0.00,business,7860 Old Grand Ave. Sioux Falls SD 57103
+731753810,Oretha,Sumners,5441858,0.00,personal,805 Hartford Street Everett MA 02149
+735113438,Orlando,Mccuen,3958169,0.00,business,31 West Strawberry Lane Glen Burnie MD 21060
+739794065,Pa,Reuss,3450726,0.00,personal,495 Riverside Ave. Ottumwa IA 52501
+742342238,Paris,Woodford,8028800,0.00,business,39 Elmwood Court Billings MT 59101
+743495434,Ranae,Lair,3848672,0.00,business,58 Addison Street Scotch Plains NJ 07076
+750072358,Ranae,Michalowski,6814589,0.00,personal,9942 Center Ave. Ada OK 74820
+751445862,Regine,Nishimura,6148295,0.00,business,36 North Wintergreen Court Dracut MA 01826
+758725855,Rex,Stelly,0331341,0.00,business,82 Brandywine Drive Endicott NY 13760
+773704753,Rich,Retherford,1663881,0.00,personal,48 Grant St. Mahopac NY 10541
+774343999,Robbi,Ivers,4989583,0.00,personal,9004 Grand Court Roanoke Rapids NC 27870
+785616816,Rodolfo,Gayer,2123240,0.00,personal,190 Marlborough St. Palm Coast FL 32137
+798269111,Roselee,Bristol,1127883,0.00,personal,7 NE. Greenrose Lane Unit 369 Nampa ID 83651
+803562324,Rosia,Jimerson,5799197,0.00,personal,8579 Cedar St. Bettendorf IA 52722
+806163020,Rowena,Mechem,5036288,0.00,business,59 Anderson Drive Roswell GA 30075
+814624147,Rusty,Baltes,2484588,0.00,personal,928 Southampton Drive Davenport IA 52804
+817104819,Rutha,Lacayo,0852248,0.00,personal,399 Shore St. Pottstown PA 19464
+819891321,Sade,Peterson,3718294,0.00,personal,6 Spring Road Temple Hills MD 20748
+821548465,Sandie,Mccurley,1747915,0.00,business,8513 Essex Court Valrico FL 33594
+822534800,Sara,Marcinkowski,5243162,0.00,personal,267 Beaver Ridge St. Honolulu HI 96815
+825838208,Seymour,Luth,1826934,0.00,business,59 S. Wrangler Rd. Cookeville TN 38501
+826313812,Shaunte,Thetford,9566857,0.00,personal,7390 Shub Farm Street Harleysville PA 19438
+828475745,Shawana,Boulware,4318925,0.00,personal,145 Tailwater Ave. Macon GA 31204
+832724894,Shawna,Collman,8967616,0.00,personal,8218 West Blackburn St. Flint MI 48504
+838615357,Sherman,Proto,4088561,0.00,personal,8870 Wellington Street Grand Forks ND 58201
+842556770,Sheron,Rosenberg,1077050,0.00,personal,8630 Cemetery Court Plymouth MA 02360
+842622016,Sigrid,Livesay,5362045,0.00,personal,9432 East Magnolia Street Wilmette IL 60091
+848190334,Soila,Moroz,7055526,0.00,business,247 Greystone Rd. Milwaukee WI 53204
+848591074,Soraya,Vanauken,2865980,0.00,business,884 Cherry Dr. Anaheim CA 92806
+855407694,Stepanie,Almeida,5129578,0.00,personal,491 East Rd. Tewksbury MA 01876
+859170834,Stephani,Hitchens,7136792,0.00,personal,6 Yukon Drive Lenoir NC 28645
+863417038,Sung,Wathen,5585559,0.00,personal,19 Randall Mill St. Long Beach NY 11561
+879069919,Susan,Coll,0941438,0.00,business,49 Harvey Ave. Elizabeth City NC 27909
+879109738,Tammera,Sorensen,2013210,0.00,business,44 Rockwell Dr. Navarre FL 32566
+879361838,Tanika,Sargeant,4269194,0.00,personal,789 Maple St. Palm Harbor FL 34683
+893759514,Tanisha,Finkel,1936847,0.00,personal,79 Devonshire Street Pataskala OH 43062
+900335503,Tanja,Knisely,3578915,0.00,business,7670 Corona St. Houston TX 77016
+903491584,Tarra,Patlan,5336674,0.00,personal,210 North Drive Gaithersburg MD 20877
+906574268,Terrie,Stocks,8393438,0.00,personal,9459 Blue Spring Ave. Mansfield MA 02048
+908711967,Theo,Arreola,2009742,0.00,business,479 Prince St. Ashburn VA 20147
+910576640,Theodore,Rotolo,9573748,0.00,business,23 Big Rock Cove Drive Watertown MA 02472
+915268773,Theron,Peluso,0237693,0.00,personal,8742 W. Green St. Grand Haven MI 49417
+920446882,Tonda,Sontag,5272718,0.00,business,9689 Birchwood Ave. Grand Blanc MI 48439
+929349616,Tosha,Laman,2354899,0.00,personal,8340 N. Morris Dr. Reno NV 89523
+930391692,Trista,Gassner,0599413,0.00,personal,3 Lafayette Ave. Parkville MD 21234
+931617554,Truman,Sweeney,8439335,0.00,personal,944 Parker Dr. Summerville SC 29483
+940320912,Ulysses,Mikels,7657445,0.00,personal,633 Trout St. Graham NC 27253
+943778029,Vennie,Dreiling,7809747,0.00,personal,9877 Fairground St. Perrysburg OH 43551
+950389049,Vernetta,Cauley,2505825,0.00,business,8743 Hudson St. Torrington CT 06790
+952150347,Vernia,Speidel,5169169,0.00,business,9849 W. Shipley St. Kissimmee FL 34741
+952799230,Vernice,Nicholas,0031341,0.00,business,165 W. Clay Road Easley SC 29640
+958162730,Victoria,Egger,1985479,0.00,business,268 South Jefferson Circle Muncie IN 47302
+962179767,Voncile,Taul,7021129,0.00,personal,396 Cleveland Drive Greenville NC 27834
+975436175,Wanita,Moberly,9569622,0.00,personal,28 Williams Ave. Fort Walton Beach FL 32547
+984994196,Windy,Amburn,4516841,0.00,personal,48 Sleepy Hollow Lane Saint Johns FL 32259
+986119889,Woodrow,Dudding,0121819,0.00,business,61 Colonial St. Brooklyn NY 11201
+989567285,Zita,Yanes,0870907,0.00,business,49 Water Dr. Newnan GA 30263
+989757749,Zonia,Thrift,0405159,0.00,personal,775 Hudson Court Philadelphia PA 19111
+991013388,Zulema,Englehart,0957450,0.00,personal,8131 NE. Oklahoma Lane Hopewell Junction NY 12533

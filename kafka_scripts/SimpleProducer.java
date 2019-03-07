@@ -58,7 +58,7 @@ public class SimpleProducer {
                 <String, String>(props);
 
         try {
-            BufferedReader br = new BufferedReader(new FileReader("../input/input.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("../input/SSN_LN_FN_AN_Bal_Type_Addr.txt"));
             String line;
             int count = 0;
             while ((line = br.readLine()) != null) {

@@ -17,3 +17,11 @@
     security_group_ids: "{{ security_group.group_id }}"
     cache_port: 6379
     cache_subnet_group: "{{'redisgroup'}}"
+  register: redis
+- name: debugging
+  debug:
+    msg: "{{ redis.elasticache.data.CacheNodes[0].Endpoint.Address }}"
+- name: open ssh tunnel
+  command: ssh -i /home/tigstep/csaa_ec2_key.pem -f -N -L6379:{{ redis.elasticache.data.CacheNodes[0].Endpoint.Address }}:6379 ec2-user@"{{ groups['ec2_group'][0] }}" &
+- name: populate redis
+  command: chdir=/mnt/c/Users/Tigran/IdeaProjects/kafka_storm_transformer/redis_inserter java -cp "/mnt/c/Users/Tigran/Documents/jedis-2.0.0.jar/*":. RedisInserter

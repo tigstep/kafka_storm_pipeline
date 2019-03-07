@@ -9,7 +9,6 @@
     - ../roles/internet_gateway
     - ../roles/route_table
     - ../roles/ec2
-    - ../roles/redis
 - hosts: ec2_group
   become: yes
   become_user: root
@@ -27,3 +26,8 @@
   become_user: root
   roles:
     - ../roles/storm_supervisor
+- hosts: localhost
+  environment:
+    AWS_PROFILE: "terraform_user"
+  roles:
+     - ../roles/redis
