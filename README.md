@@ -1,29 +1,42 @@
 # kafka_storm_transformer
-To Do
-<ul>
-<li>REDIS</li>
-<ul>
-  <li>spin up a redis cluster using ansible
-	  <ol>
-      <li> create an elasticache_subnet_group</li>
-	    <li> open 6379 in the security group</li>
-      <li> use the same zone as in vpc(should I even use it?)</li>
-    </ol>
-  </li>
-  <li>Create an ssh tunnel</li>
-  <li>test the redis from local</li>
-  <li>write a java redis test class</li>
-  <li>test the java redis from local</li>
-  <li>using the above java class insert into redis the needed test data</li>
-</ul>
-<li>PSQL</li>
-<ul>
-  <li>start a psql database</li>
-</ul>
-<li>STORM</li>
+<h2>
+  Tools/Services Used
+</h2>
   <ul>
-    <li>implement time/count based batching</li>
+  <li>Java</li>
+  <li>Ansible</li>
+  <li>Docker</li>
+  <li>Apache Zookeeper</li>	
+  <li>Apache Kafka</li>
+  <li>Apache Storm</li>	
+  <li>AWS</li>
+    <ul>
+      <li>EC2</li>
+      <li>RDS</li>
+      <li>Elasticache(Redis)</li>
+    </ul>
   </ul>
+<h2>
+
+<h2>
+	To Do
+</h2>
+<ul>
+<li>Storm Transformer</li>
+<ol>
+	<li>Pass the redis endpoint into Topology</li>
+	<li>Add Jedis to Topology Maven</li>
+	<li>Change the Obfuscator bolt name to LookupBolt</li>
+  	<li>Modify the transformer to do a Redis lookup</li>
+</ol>
+<li>PSQL</li>
+<ol>
+  <li>start a psql database</li>
+</ol>
+<li>STORM</li>
+<ol>
+  <li>implement time/count based batching</li>
+</ol>
 </ul>
 
 Observations
