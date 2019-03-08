@@ -91,8 +91,9 @@ In order to execute issue <b>ansible-playbook infrastructure.yml</b> while using
   <li>Start a psql database</li>
 </ol>
 </ul>
-
+<h2>
 Observations
+</h2>
 <ul>
 	<li>If possible, always use Terraform for infrastructure setup</li>
 </ul>
