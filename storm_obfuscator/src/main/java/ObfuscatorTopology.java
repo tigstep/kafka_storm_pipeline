@@ -26,6 +26,8 @@ public class ObfuscatorTopology {
         LOG.info(String.format("The topic name is : %s", topicName));
         String nimbusHost = args[3];
         LOG.info(String.format("Nibus host is : %s", nimbusHost));
+        String redisEndpoint = args[4];
+        LOG.info(String.format("Redis endpoint  is : %s", redisEndpoint));
 
         //Configuring the spout
         KafkaSpoutConfig spoutConf = KafkaSpoutConfig.builder(zkConnString, topicName).setFirstPollOffsetStrategy(LATEST).build();
@@ -36,6 +38,7 @@ public class ObfuscatorTopology {
         Config conf = new Config();
         conf.put(Config.NIMBUS_SEEDS, Arrays.asList(new String[]{nimbusHost}));
         conf.setDebug(false);
+        conf.put("redisEndpoint", redisEndpoint);
 
         //If there are arguments, we are running on a cluster
         if (args != null && args.length > 0) {
