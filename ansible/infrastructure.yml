@@ -31,3 +31,4 @@
     AWS_PROFILE: "terraform_user"
   roles:
      - ../roles/redis
+     - ../roles/kafka_topic

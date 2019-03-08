@@ -1,0 +1,2 @@
+- name: create kafka topic
+  command: kafka-topics --create --zookeeper "{{ groups['ec2_group'][0] }}" --replication-factor 2 --partitions 1 --topic test
