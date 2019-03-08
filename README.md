@@ -95,7 +95,7 @@ In order to execute issue <b>ansible-playbook infrastructure.yml</b>, while usin
 Observations
 </h2>
 <ul>
-	<li>If possible, always use Terraform for infrastructure setup. Ansible is good as far as working with already provisioned resources goes, i.e if a kafka container is being spun up on an EC2 instance, however, terraform is much more intuitive as far as EC2 instance creation, itself, is concerned</li>
+	<li>If possible, always use Terraform for infrastructure creation. Ansible is good as far as working with already provisioned resources goes(i.e a kafka container is being spun up on an EC2 instance, however, terraform is much more intuitive as far as EC2 instance creation, itself, is concerned)</li>
 </ul>
 <h2>
   Warnings
