@@ -35,14 +35,14 @@ The events (in following format - <b>CustID,Balance</b>) for this pipline are be
 <ul>
 	<li><b>LookupBolt</b>
 		<ol>
-			<li>Extracts the CustID from the tuple </li>
-			<li>Looks up the Redis cluster and gets the SSN for that CustID</li>
-			<li>Passes the SSN along with the Balance to both RDSInserterBolt</b> and S3WriterBolt</li>
+			<li>Extracts the <b>CustID</b> from the tuple </li>
+			<li>Looks up the Redis cluster and gets the <b>SSN</b> for that <b>CustID</b></li>
+			<li>Passes the <b>SSN</b> along with the <b>Balance</b> to both <b>RDSInserterBolt</b> and <b>S3WriterBolt</b></li>
 		</ol>
 		</li>
 	<li><b>RDSInserterBolt</b>
 		<ol>
-			<li>For each tuple does an upsert in RDS PSQL Balances table</li>
+			<li>For each tuple does an upsert in RDS PSQL <b>Balances</b> table</li>
 		</ol>
 	</li>
 	<li><b>S3WriterBolt</b>
@@ -55,12 +55,12 @@ The events (in following format - <b>CustID,Balance</b>) for this pipline are be
 <h2>
   Execution
 </h2>
-In order to execute issue ansible-playbook infrastructure.yml while using your own AWS user. Once ansible run is complete, run on or more instances of SimpleProducer.java. The pipeline will start populating the RDS and writing files into S3 at this point.
+In order to execute issue <b>ansible-playbook infrastructure.yml</b>, while using your own AWS user. Once ansible run is complete, run one or more instances of <b>SimpleProducer.java</b>. The pipeline will start populating the RDS and writing files into S3 at this point.
 <h2>
   Execution Process Description
 </h2>
 	<ul>
-		<li>ansible-playbook infrastructure.yml
+		<li><b>ansible-playbook infrastructure.yml</b>
 		<ol>
 			<li>Creates a dedicated VPC for this project</li>
 			<li>Creates a subnet inside that VPC, sets up an Internet Gateway and definesall the neccessary routes</li>
@@ -70,7 +70,7 @@ In order to execute issue ansible-playbook infrastructure.yml while using your o
 			<li>Deployes the storm topology</li>
 		</ol>
 			</li>
-		<li>SimpleProducer
+		<li><b>SimpleProducer</b>
 		<ol>Produces events to kafka topic to be consumed by the pipeline</ol>
 			</li>
 	</ul>
