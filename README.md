@@ -24,18 +24,15 @@
 <ul>
 <li>Storm Transformer</li>
 <ol>
-	<li>Pass the redis endpoint into Topology</li>
-	<li>Add Jedis to Topology Maven</li>
-	<li>Change the Obfuscator bolt name to LookupBolt</li>
-  	<li>Modify the transformer to do a Redis lookup</li>
+	<li>Change the Topology name from Obfuscator to CustomerLookupTopology</li>
+	<li>Change the Obfuscator Bolt name to LookupBolt</li>
+	<li>Modify the LookupBolt to do a Redis lookup</li>
+	<li>Implement RDS writer bolt<\li>
+	<li>implement time/count based batching for S3WriterBolt</li>
 </ol>
 <li>PSQL</li>
 <ol>
-  <li>start a psql database</li>
-</ol>
-<li>STORM</li>
-<ol>
-  <li>implement time/count based batching</li>
+  <li>Start a psql database</li>
 </ol>
 </ul>
 
