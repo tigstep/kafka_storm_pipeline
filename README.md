@@ -1,4 +1,4 @@
-# kafka_storm_transformer
+# kafka_storm_pipeline
 <h2>
   Diagram
 </h2>
