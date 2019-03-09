@@ -4,6 +4,7 @@ import org.apache.storm.topology.OutputFieldsDeclarer;
 import org.apache.storm.topology.base.BaseRichBolt;
 import org.apache.storm.tuple.Fields;
 import org.apache.storm.tuple.Tuple;
+import org.apache.storm.tuple.Values;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,18 +31,23 @@ public class RedisLookupBolt extends BaseRichBolt {
     }
 
     @Override
-    public void execute(Tuple input) {
-        Set<String> keys = jedis.keys("*");
-        for( String key : keys ){
-            LOG.info(key);
-        }
-        LOG.info(redisEndpoint);
-        LOG.info(input.toString());
-        _collector.ack(input);
+    public void execute(Tuple sprout_tpl) {
+        LOG.info(String.format("tuple is %s", sprout_tpl.getString(3)));
+        LOG.info(String.format("tuple is %s", sprout_tpl.toString()));
+        LOG.info(String.format("tuple is %s", sprout_tpl.getFields().toString()));
+        LOG.info(String.format("tuple is %s", sprout_tpl.getValue(0)));
+        /*String custID = sprout_tpl.getString(4);
+        LOG.info(String.format("custID is %s", custID));
+        String balance = sprout_tpl.getString(5);
+        LOG.info(String.format("balance is %s", balance));
+        String ssn = jedis.get(custID);
+        LOG.info(String.format("custId :  %s, ssn : %s", custID, ssn));
+        _collector.emit(sprout_tpl, new Values(ssn, balance));
+        _collector.ack(sprout_tpl);*/
     }
 
     @Override
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
-        declarer.declare(new Fields("double", "triple"));
+        declarer.declare(new Fields("ssn", "balance"));
     }
 }
