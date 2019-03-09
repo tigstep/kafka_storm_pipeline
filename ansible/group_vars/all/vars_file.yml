@@ -1,0 +1,14 @@
+#vpc vars
+cidr_block: 10.0.0.0/16
+vpc_name: kafka-storm
+tag_name: kafka-storm
+region: us-west-1
+
+#ec2 vars
+key_name: csaa_ec2_key
+instance_type: t2.small
+ami_id: ami-0799ad445b5727125
+count: 3
+
+#subnet vars
+subnet_cidr_block: 10.0.1.0/24

@@ -2,7 +2,7 @@
   ec2_vpc_subnet:
         state: present
         vpc_id: "{{ vpc.vpc.id }}"
-        cidr: "{{ cidr_block }}"
+        cidr: "{{ subnet_cidr_block }}"
         resource_tags:
           Name: "{{ tag_name }}"
   register: subnet
