@@ -13,8 +13,8 @@ import org.slf4j.LoggerFactory;
  * Created by tigstep on 2/18/2019.
  */
 
-public class ObfuscatorTopology {
-    private static final Logger LOG = LoggerFactory.getLogger(ObfuscatorTopology.class);
+public class StormTopology {
+    private static final Logger LOG = LoggerFactory.getLogger(StormTopology.class);
     public static void main(String[] args) throws Exception {
         TopologyBuilder builder = new TopologyBuilder();
         //Setting arguments
@@ -32,7 +32,7 @@ public class ObfuscatorTopology {
         //Configuring the spout
         KafkaSpoutConfig spoutConf = KafkaSpoutConfig.builder(zkConnString, topicName).setFirstPollOffsetStrategy(LATEST).build();
         builder.setSpout("kafka_spout", new KafkaSpout<>(spoutConf));
-        builder.setBolt("obfuscatorBolt", new ObfuscatorBolt(), 8).shuffleGrouping("kafka_spout");
+        builder.setBolt("RedisLookupBolt", new RedisLookupBolt(), 1).shuffleGrouping("kafka_spout");
 
         //Setting topology's configuration
         Config conf = new Config();

@@ -16,9 +16,9 @@ import redis.clients.jedis.Jedis;
  * Created by tigstep on 2/18/2019.
  */
 
-public class ObfuscatorBolt extends BaseRichBolt {
+public class RedisLookupBolt extends BaseRichBolt {
     private OutputCollector _collector;
-    private static final Logger LOG = LoggerFactory.getLogger(ObfuscatorBolt.class);
+    private static final Logger LOG = LoggerFactory.getLogger(RedisLookupBolt.class);
     private String redisEndpoint;
     private Jedis jedis;
 
