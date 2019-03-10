@@ -31,8 +31,9 @@ public class StormTopology {
 
         //Configuring the spout
         KafkaSpoutConfig spoutConf = KafkaSpoutConfig.builder(zkConnString, topicName).setFirstPollOffsetStrategy(LATEST).build();
-        builder.setSpout("kafka_spout", new KafkaSpout<>(spoutConf));
-        builder.setBolt("RedisLookupBolt", new RedisLookupBolt(), 1).shuffleGrouping("kafka_spout");
+        builder.setSpout("KafkaSpout", new KafkaSpout<>(spoutConf));
+        builder.setBolt("RedisLookupBolt", new RedisLookupBolt(), 2).shuffleGrouping("KafkaSpout");
+        builder.setBolt("RDSInserterBolt", new RDSInserterBolt(), 2).shuffleGrouping("RedisLookupBolt");
 
         //Setting topology's configuration
         Config conf = new Config();
@@ -42,7 +43,7 @@ public class StormTopology {
 
         //If there are arguments, we are running on a cluster
         if (args != null && args.length > 0) {
-            conf.setNumWorkers(1);
+            conf.setNumWorkers(2);
             StormSubmitter.submitTopology(topologyName, conf, builder.createTopology());
         }
         else {
