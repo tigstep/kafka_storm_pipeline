@@ -80,10 +80,7 @@ In order to execute issue <b>ansible-playbook infrastructure.yml</b>, while usin
 <ul>
 <li>Storm Transformer</li>
 <ol>
-	<li>Change the source for SimpleProducer, and make it param driven</li>
-	<li>Change the Topology name from Obfuscator to CustomerLookupTopology</li>
-	<li>Change the Obfuscator Bolt name to LookupBolt</li>
-	<li>Modify the LookupBolt to do a Redis lookup</li>
+	<li>Make SimpleProducer param driven</li>
 	<li>Implement RDS writer bolt</li>
 	<li>implement time/count based batching for S3WriterBolt</li>
 </ol>

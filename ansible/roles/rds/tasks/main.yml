@@ -1,0 +1,22 @@
+- name: rds subnet group
+  rds_subnet_group:
+    description: rds subnet group
+    state: present
+    name: rdsgroup
+    region: "{{ region }}"
+    subnets:
+      - "{{ subnet1.subnet.id }}"
+      - "{{ subnet2.subnet.id }}"
+
+- name: rds
+  rds_instance:
+    id: kafka-storm-db
+    state: present
+    engine: postgres
+    publicly_accessible: yes
+    db_instance_class: db.t2.micro
+    db_subnet_group_name: "{{'rdsgroup'}}"
+    vpc_security_group_ids: "{{ security_group.group_id }}"
+    username: ""
+    password: ""
+    allocated_storage: "20"

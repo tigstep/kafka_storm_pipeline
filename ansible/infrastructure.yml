@@ -8,27 +8,28 @@
     - ../roles/security_group
     - ../roles/internet_gateway
     - ../roles/route_table
-    - ../roles/ec2
-- hosts: ec2_group
-  become: yes
-  become_user: root
-  roles:
-    - ../roles/docker
-    - ../roles/zookeeper
-    - ../roles/kafka
-- hosts: nimbus_group
-  become: yes
-  become_user: root
-  roles:
-    - ../roles/storm_nimbus
-- hosts: supervisor_group
-  become: yes
-  become_user: root
-  roles:
-    - ../roles/storm_supervisor
+#    - ../roles/ec2
+#- hosts: ec2_group
+#  become: yes
+#  become_user: root
+#  roles:
+#    - ../roles/docker
+#    - ../roles/zookeeper
+#    - ../roles/kafka
+#- hosts: nimbus_group
+#  become: yes
+#  become_user: root
+#  roles:
+#    - ../roles/storm_nimbus
+#- hosts: supervisor_group
+#  become: yes
+#  become_user: root
+#  roles:
+#    - ../roles/storm_supervisor
 - hosts: localhost
   environment:
     AWS_PROFILE: "terraform_user"
   roles:
-     - ../roles/redis
-     - ../roles/kafka_topic
+#     - ../roles/redis
+#     - ../roles/kafka_topic
+    - ../roles/rds

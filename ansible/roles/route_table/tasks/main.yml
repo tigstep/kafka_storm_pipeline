@@ -5,7 +5,8 @@
     tags:
       Name: public
     subnets:
-      - "{{ subnet.subnet.id }}"
+      - "{{ subnet1.subnet.id }}"
+      - "{{ subnet2.subnet.id }}"
     routes:
       - dest: 0.0.0.0/0
         gateway_id: "{{ igw.gateway_id }}"

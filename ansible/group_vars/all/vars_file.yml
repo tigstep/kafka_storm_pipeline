@@ -11,4 +11,5 @@ ami_id: ami-0799ad445b5727125
 count: 3
 
 #subnet vars
-subnet_cidr_block: 10.0.1.0/24
+subnet_cidr_block_1: 10.0.1.0/24
+subnet_cidr_block_2: 10.0.2.0/24

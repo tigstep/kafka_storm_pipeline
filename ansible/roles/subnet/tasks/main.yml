@@ -1,8 +1,19 @@
-- name: kafkastorm subnet
+- name: kafkastorm subnet 1
   ec2_vpc_subnet:
         state: present
         vpc_id: "{{ vpc.vpc.id }}"
-        cidr: "{{ subnet_cidr_block }}"
+        cidr: "{{ subnet_cidr_block_1 }}"
+        az: "{{'us-west-1b'}}"
         resource_tags:
           Name: "{{ tag_name }}"
-  register: subnet
+  register: subnet1
+
+- name: kafkastorm subnet 2
+  ec2_vpc_subnet:
+        state: present
+        vpc_id: "{{ vpc.vpc.id }}"
+        cidr: "{{ subnet_cidr_block_2 }}"
+        az: "{{'us-west-1c'}}"
+        resource_tags:
+          Name: "{{ tag_name }}"
+  register: subnet2
