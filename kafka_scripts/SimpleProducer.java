@@ -58,24 +58,17 @@ public class SimpleProducer {
                 <String, String>(props);
 
         try {
-            BufferedReader br = new BufferedReader(new FileReader("../input/SSN_LN_FN_AN_Bal_Type_Addr.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("../input/CustID_Bal.txt"));
             String line;
-            int count = 0;
             while ((line = br.readLine()) != null) {
-                count += 1;
-                producer.send(new ProducerRecord<String, String>(topicName,
-                        Integer.toString(count), line));
+                System.out.println(line);
+                producer.send(new ProducerRecord<String, String>(topicName, line));
+                Thread.sleep(1000);
             }
             producer.close();
         } catch (IOException e){
             System.exit(1);
         }
-            /*
-        for(int i = 0; i < 10; i++)
-            producer.send(new ProducerRecord<String, String>(topicName,
-                    Integer.toString(i), Integer.toString(i)));
-        System.out.println("Message sent successfully");
-        producer.close();
-        */
+
     }
 }

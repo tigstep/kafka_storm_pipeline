@@ -24,11 +24,9 @@ public class RDSInserterBolt extends BaseRichBolt {
 
     @Override
     public void execute(Tuple redis_lkp_tpl) {
-        LOG.info(String.format("tpl fields are: %s", redis_lkp_tpl.getFields()));
         String ssn = ((String) redis_lkp_tpl.getValueByField("ssn"));
-        LOG.info(String.format("ssn is: %s", ssn));
         String balance = ((String) redis_lkp_tpl.getValueByField("balance"));
-        LOG.info(String.format("balance is: %s", balance));
+        LOG.info(String.format("ssn - balance : %s - %s", ssn, balance));
         _collector.ack(redis_lkp_tpl);
     }
 

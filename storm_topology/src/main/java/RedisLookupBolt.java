@@ -33,11 +33,9 @@ public class RedisLookupBolt extends BaseRichBolt {
     @Override
     public void execute(Tuple spout_tpl) {
         String custID = ((String) spout_tpl.getValueByField("value")).split(",")[0];
-        LOG.info(String.format("custID is: %s", custID));
         String balance = ((String) spout_tpl.getValueByField("value")).split(",")[1];
-        LOG.info(String.format("balance is: %s", balance));
         String ssn = jedis.get(custID);
-        LOG.info(String.format("custId :  %s, ssn : %s", custID, ssn));
+        //LOG.info(String.format("custId :  %s, ssn : %s", custID, ssn));
         _collector.emit(spout_tpl, new Values(ssn, balance));
         _collector.ack(spout_tpl);
     }
