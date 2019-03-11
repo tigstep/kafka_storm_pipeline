@@ -87,6 +87,7 @@ In order to execute issue <b>ansible-playbook infrastructure.yml</b>, while usin
 </ol>
 	</li>
 </ul>
+<h2>
 Observations
 </h2>
 <ul>
