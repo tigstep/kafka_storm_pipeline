@@ -80,10 +80,10 @@ In order to execute issue <b>ansible-playbook infrastructure.yml</b>, while usin
 </h2>
 <ul>
 <li>Storm Transformer</li>
-<ol>
-	<li>Make SimpleProducer param driven</li>
+<ol>	
+	<li>Convert SimpleProducer, RDS Inserter and Redis Inserter into maven subprojects</li>  
 	<li>Implement RDS writer bolt</li>
-	<li>implement time/count based batching for S3WriterBolt</li>
+	<li>Implement time/count based batching for S3WriterBolt</li>
 </ol>
 <li>PSQL</li>
 <ol>
