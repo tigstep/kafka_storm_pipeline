@@ -12,3 +12,7 @@ kafka-console-consumer --bootstrap-server <host>:9092 --topic test --from-beginn
 javac -cp "/mnt/c/Users/Tigran/Documents/jedis-2.0.0.jar/*" RedisInserter.java
 #To run
 java -cp "/mnt/c/Users/Tigran/Documents/jedis-2.0.0.jar/*":. RedisInserter
+
+#To insert into RDS
+javac -cp "/mnt/c/Users/Tigran/Downloads/postgresql-42.2.5.jar" RDSInserter.java
+java -cp "/mnt/c/Users/Tigran/Downloads/postgresql-42.2.5.jar":. RDSInserter kafka-storm-db.cu6klmcvkstw.us-west-1.rds.amazonaws.com test test1111
