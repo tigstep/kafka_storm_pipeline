@@ -79,18 +79,14 @@ In order to execute issue <b>ansible-playbook infrastructure.yml</b>, while usin
 	To Do
 </h2>
 <ul>
-<li>Storm Transformer</li>
+<li>Storm Transformer
 <ol>	
 	<li>Convert SimpleProducer, RDS Inserter and Redis Inserter into maven subprojects</li>  
 	<li>Implement RDS writer bolt</li>
 	<li>Implement time/count based batching for S3WriterBolt</li>
 </ol>
-<li>PSQL</li>
-<ol>
-  <li>Start a psql database</li>
-</ol>
+	</li>
 </ul>
-<h2>
 Observations
 </h2>
 <ul>
