@@ -1,4 +1,3 @@
-SSN,LastName,FirstName,AccountNumber,Balance,Type,Address
 997903835,Adelia,Persing,5625032,0.00,business,470 S. Lexington St. Springfield Gardens NY 11413
 112084410,Agnus,Laswell,8111895,0.00,personal,462 Paris Hill Avenue Monroeville PA 15146
 113542615,Alberto,Borg,6972027,0.00,personal,9912 Myers Drive State College PA 16801
