@@ -5,7 +5,7 @@
     name: redisgroup
     region: "{{ region }}"
     subnets:
-      - "{{ subnet.subnet.id }}"
+      - "{{ subnet1.subnet.id }}"
 - name: redis
   elasticache:
     name: "kafka-storm"
@@ -23,5 +23,8 @@
     msg: "{{ redis.elasticache.data.CacheNodes[0].Endpoint.Address }}"
 - name: open ssh tunnel
   command: ssh -i /home/tigstep/csaa_ec2_key.pem -f -N -L6379:{{ redis.elasticache.data.CacheNodes[0].Endpoint.Address }}:6379 ec2-user@"{{ groups['ec2_group'][0] }}" &
+- name: wait 10 seconds
+  pause:
+    seconds: 10
 - name: populate redis
-  command: chdir=/mnt/c/Users/Tigran/IdeaProjects/kafka_storm_pipeline/redis_inserter java -cp "/mnt/c/Users/Tigran/Documents/jedis-2.0.0.jar/*":. RedisInserter
+  command: chdir=/mnt/c/Users/Tigran/IdeaProjects/kafka_storm_pipeline/redisInserter/target java -jar RedisInserter.jar

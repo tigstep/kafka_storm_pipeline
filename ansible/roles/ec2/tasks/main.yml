@@ -7,7 +7,7 @@
     wait: yes
     group: "{{ security_group.group_name }}"
     count: "{{ count }}"
-    vpc_subnet_id: "{{ subnet.subnet.id }}"
+    vpc_subnet_id: "{{ subnet1.subnet.id }}"
     assign_public_ip: yes
   register: ec2s
 - name: debugging

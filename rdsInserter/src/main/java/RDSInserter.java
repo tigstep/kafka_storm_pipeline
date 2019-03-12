@@ -1,5 +1,7 @@
-import java.sql.*;
 import java.io.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 class RDSInserter {
 
@@ -17,7 +19,7 @@ class RDSInserter {
                 ", address)\n" +
                 "VALUES ('%s','%s','%s','%s','%s','%s','%s');";
 
-        FileInputStream fstream = new FileInputStream("../input/SSN_LN_FN_AN_Bal_Type_Addr.txt");
+        FileInputStream fstream = new FileInputStream("../../input/SSN_LN_FN_AN_Bal_Type_Addr.txt");
         BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
         try {
             String url = String.format("jdbc:postgresql://%s:5432/transactions", endpoint);
@@ -45,7 +47,7 @@ class RDSInserter {
             conn.close();
         } catch (Exception e) {
             System.err.println("Got an exception! ");
-            System.err.println(e.getMessage());
+            System.err.println(e);
         }
 
     }
