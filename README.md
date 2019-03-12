@@ -67,6 +67,7 @@ In order to execute issue <b>ansible-playbook infrastructure.yml</b>, while usin
 			<li>Creates a SecurityGroup to be assigned to different resources throughout this project</li>
 			<li>Spins up EC2 instances and runs Zookeeper, Kafka and Storm Docker containers on them</li>
 			<li>Creates an Elastichache(Redis) cluster and populates it with lookup data</li>
+			<li>Creates an RDS Postgres instance to be populated by the pipeline</li>
 			<li>Deploys the storm topology</li>
 		</ol>
 			</li>
@@ -78,16 +79,13 @@ In order to execute issue <b>ansible-playbook infrastructure.yml</b>, while usin
 	To Do
 </h2>
 <ul>
-<li>Storm Transformer</li>
-<ol>
-	<li>Make SimpleProducer param driven</li>
+<li>Storm Transformer
+<ol>	
+	<li>Convert SimpleProducer, RDS Inserter and Redis Inserter into maven subprojects</li>  
 	<li>Implement RDS writer bolt</li>
-	<li>implement time/count based batching for S3WriterBolt</li>
+	<li>Implement time/count based batching for S3WriterBolt</li>
 </ol>
-<li>PSQL</li>
-<ol>
-  <li>Start a psql database</li>
-</ol>
+	</li>
 </ul>
 <h2>
 Observations
