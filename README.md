@@ -72,8 +72,9 @@ In order to execute issue <b>ansible-playbook infrastructure.yml</b>, while usin
 		</ol>
 			</li>
 		<li><b>KafkaStormProducer</b>
-		<ol>Produces events to kafka topic to be consumed by the pipeline</ol>
-			</li>
+		<ol>
+			<li>Produces events to kafka topic to be consumed by the pipeline</li>
+			</ol>
 	</ul>
 <h2>
 	To Do
