@@ -79,14 +79,11 @@ In order to execute issue <b>ansible-playbook infrastructure.yml</b>, while usin
 	To Do
 </h2>
 <ul>
-<li>Storm Transformer
-<ol>	
+
 	<li>Make KafkaStormProducer param based</li>  
 	<li>Create a config.yml.tplt and start pushing this instead of original ansible config one</li>
 	<li>Implement RDS writer bolt</li>
 	<li>Implement time/count based batching for S3WriterBolt</li>
-</ol>
-	</li>
 </ul>
 <h2>
 Observations
