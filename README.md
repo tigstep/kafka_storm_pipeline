@@ -55,7 +55,7 @@ The events (in following format - <b>CustID,Balance</b>) for this pipeline are b
 <h2>
   Execution
 </h2>
-In order to execute issue <b>ansible-playbook infrastructure.yml</b>, while using your own AWS user. Once ansible run is complete, run one or more instances of <b>SimpleProducer.java</b>. The pipeline will start populating the RDS and writing files into S3 at this point.
+In order to execute issue <b>ansible-playbook infrastructure.yml</b>, while using your own AWS user. Once ansible run is complete, run one or more instances of <b>KafkaStormProducer.jar</b>(generated from the KafkaStormProducer module by maven). The pipeline will start populating the RDS and writing files into S3 at this point.
 <h2>
   Execution Process Description
 </h2>
