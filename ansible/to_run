@@ -10,3 +10,23 @@ docker run -p --hostname nimbus_host 6700:6700 -d --restart always --name superv
 storm jar target/StormTopology.jar StormTopology topology_name zk_host topic_name nimbus_host redis_endpoint
 #open ssh tunnel for redis
 ssh -i <key.pem> -f -N -L6379:<redis-endpoint>:6379 ec2-user@<ec2-host> &
+
+
+#To create a topic
+kafka-topics --create --zookeeper <ZK_HOST> --replication-factor 2 --partitions 1 --topic test
+#To produce using simple producer
+kafka-console-producer --broker-list zk_host:9092 --topic test
+#To compile the SimpleProducer
+javac -cp "/home/linuxbrew/.linuxbrew/Cellar/kafka/2.1.0/libexec/libs/*" SimpleProducer.java
+#To run the SimpleProducer
+java -cp "/home/linuxbrew/.linuxbrew/Cellar/kafka/2.1.0/libexec/libs/*":. SimpleProducer test
+#To Consume
+kafka-console-consumer --bootstrap-server <host>:9092 --topic test --from-beginning
+#To compile jedis
+javac -cp "/mnt/c/Users/Tigran/Documents/jedis-2.0.0.jar/*" RedisInserter.java
+#To run
+java -cp "/mnt/c/Users/Tigran/Documents/jedis-2.0.0.jar/*":. RedisInserter
+
+#To insert into RDS
+javac -cp "/mnt/c/Users/Tigran/Downloads/postgresql-42.2.5.jar" RDSInserter.java
+java -cp "/mnt/c/Users/Tigran/Downloads/postgresql-42.2.5.jar":. RDSInserter kafka-storm-db.cu6klmcvkstw.us-west-1.rds.amazonaws.com test test1111

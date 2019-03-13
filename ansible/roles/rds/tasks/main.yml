@@ -26,4 +26,4 @@
   debug:
     msg: "{{ rds }}"
 - name: populate rds
-  command: chdir=/mnt/c/Users/Tigran/IdeaProjects/kafka_storm_pipeline/rdsInserter/target java -jar RedisInserter.jar "{{rds.endpoint.address}}" "{{rds.master_username}}" "{{'test1111'}}"
+  command: chdir=/mnt/c/Users/Tigran/IdeaProjects/kafka_storm_pipeline/rdsInserter/target java -jar RDSInserter.jar "{{rds.endpoint.address}}" "{{rds.master_username}}" "{{'test1111'}}"

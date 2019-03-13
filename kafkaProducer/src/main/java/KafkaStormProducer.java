@@ -13,8 +13,8 @@ import org.apache.kafka.clients.producer.KafkaProducer;
 //import ProducerRecord packages
 import org.apache.kafka.clients.producer.ProducerRecord;
 
-//Create java class named “SimpleProducer”
-public class SimpleProducer {
+//Create java class named “KafkaProducer”
+public class KafkaStormProducer {
 
     public static void main(String[] args) throws Exception{
 
@@ -58,7 +58,7 @@ public class SimpleProducer {
                 <String, String>(props);
 
         try {
-            BufferedReader br = new BufferedReader(new FileReader("../input/CustID_Bal.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("../../input/CustID_Bal.txt"));
             String line;
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
