@@ -71,7 +71,7 @@ In order to execute issue <b>ansible-playbook infrastructure.yml</b>, while usin
 			<li>Deploys the storm topology</li>
 		</ol>
 			</li>
-		<li><b>SimpleProducer</b>
+		<li><b>KafkaStormProducer</b>
 		<ol>Produces events to kafka topic to be consumed by the pipeline</ol>
 			</li>
 	</ul>
