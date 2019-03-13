@@ -85,6 +85,8 @@ In order to execute issue <b>ansible-playbook infrastructure.yml</b>, while usin
 	<li>Create a config.yml.tplt and start pushing this instead of original ansible config one</li>
 	<li>Implement RDS writer bolt</li>
 	<li>Implement time/count based batching for S3WriterBolt</li>
+	<li>Add <b>storm logviewer</b> to supervisor dockers</li>
+	<li>Implement a prod level logging and exception handling</li>
 </ul>
 <h2>
 Observations
