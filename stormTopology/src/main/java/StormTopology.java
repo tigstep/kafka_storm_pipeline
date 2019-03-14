@@ -27,7 +27,13 @@ public class StormTopology {
         String nimbusHost = args[3];
         LOG.info(String.format("Nibus host is : %s", nimbusHost));
         String redisEndpoint = args[4];
-        LOG.info(String.format("Redis endpoint  is : %s", redisEndpoint));
+        LOG.info(String.format("Redis endpoint is : %s", redisEndpoint));
+        String rdsEndpoint = args[5];
+        LOG.info(String.format("RDS endpoint is : %s", rdsEndpoint));
+        String rdsUsername = args[6];
+        LOG.info(String.format("RDS username is : %s", rdsUsername));
+        String rdsPassword = args[7];
+        LOG.info(String.format("RDS password is : %s", rdsPassword));
 
         //Configuring the spout
         KafkaSpoutConfig spoutConf = KafkaSpoutConfig.builder(zkConnString, topicName).setFirstPollOffsetStrategy(LATEST).build();
@@ -40,6 +46,9 @@ public class StormTopology {
         conf.put(Config.NIMBUS_SEEDS, Arrays.asList(new String[]{nimbusHost}));
         conf.setDebug(false);
         conf.put("redisEndpoint", redisEndpoint);
+        conf.put("rdsEndpoint", rdsEndpoint);
+        conf.put("rdsUsername", rdsUsername);
+        conf.put("rdsPassword", rdsPassword);
 
         //If there are arguments, we are running on a cluster
         if (args != null && args.length > 0) {

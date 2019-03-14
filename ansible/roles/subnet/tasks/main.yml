@@ -7,7 +7,6 @@
         resource_tags:
           Name: "{{ tag_name }}"
   register: subnet1
-
 - name: kafkastorm subnet 2
   ec2_vpc_subnet:
         state: present
