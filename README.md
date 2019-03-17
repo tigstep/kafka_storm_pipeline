@@ -2,6 +2,8 @@
 <h2>
   Diagram
 </h2>
+
+![alt text](https://github.com/tigstep/kafka_storm_pipeline/blob/master/diagrams/diagram.jpg)
 <h2>
   Requirements
 </h2>
